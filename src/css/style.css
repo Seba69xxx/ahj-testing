@@ -28,7 +28,7 @@ body {
   width: 50px;
   height: 32px;
   border-radius: 4px;
-  background-color: #eee;
+  background-color: #fff;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -43,13 +43,13 @@ body {
   transform: scale(1.1);
 }
 
-.card.visa { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/visa.png'); }
-.card.master { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/mastercard.png'); }
-.card.amex { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/amex.png'); }
-.card.discover { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/discover.png'); }
-.card.jcb { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/jcb.png'); }
-.card.diners { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/diners.png'); }
-.card.mir { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/mir.png'); }
+.card.visa { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg'); }
+.card.master { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'); }
+.card.amex { background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg'); }
+.card.discover { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/Discover_Card_logo.svg'); }
+.card.jcb { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg'); }
+.card.diners { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a6/Diners_Club_Logo3.svg'); }
+.card.mir { background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b9/Mir-logo.SVG.svg'); }
 
 .card-form-widget {
   display: flex;
