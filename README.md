@@ -6,5 +6,5 @@
 
 
 
-\### 🔗 \[OPEN APP](https://seba69xxx.github.io/ahj-testing/)
+\### \[OPEN APP](https://seba69xxx.github.io/ahj-testing/)
 
