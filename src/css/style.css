@@ -9,67 +9,83 @@ body {
 
 .card-validator {
   background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  width: 400px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 500px;
 }
 
 .cards {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  justify-content: flex-start;
   margin-bottom: 20px;
 }
 
 .card {
-  width: 60px;
-  height: 40px;
-  background-color: #ddd;
+  width: 50px;
+  height: 32px;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-  font-weight: bold;
-  color: #555;
-  transition: opacity 0.3s;
+  background-color: #eee;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%) opacity(0.4);
+  transition: all 0.3s;
+  border: 1px solid #ddd;
 }
 
-.card.visa { background-color: #1a1f71; color: white; }
-.card.master { background-color: #eb001b; color: white; }
-.card.amex { background-color: #2e77bc; color: white; }
-.card.discover { background-color: #ff6000; color: white; }
-.card.mir { background-color: #0078be; color: white; }
+.card.active {
+  filter: grayscale(0%) opacity(1);
+  border-color: #888;
+  transform: scale(1.1);
+}
+
+.card.visa { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/visa.png'); }
+.card.master { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/mastercard.png'); }
+.card.amex { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/amex.png'); }
+.card.discover { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/discover.png'); }
+.card.jcb { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/jcb.png'); }
+.card.diners { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/diners.png'); }
+.card.mir { background-image: url('https://raw.githubusercontent.com/muhzi/credit-card-logos/main/colored/mir.png'); }
+
+.card-form-widget {
+  display: flex;
+  gap: 10px;
+}
 
 .input {
-  width: 100%;
-  padding: 10px;
+  flex-grow: 1;
+  padding: 10px 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 16px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+  outline: none;
 }
 
 .input.valid {
-  border-color: green;
+  border-color: #4CAF50;
   background-color: #e8f5e9;
 }
 
 .input.invalid {
-  border-color: red;
+  border-color: #F44336;
   background-color: #ffebee;
 }
 
 .submit {
-  width: 100%;
-  padding: 10px;
-  background-color: #28a745;
+  padding: 10px 20px;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
+}
+
+.submit:hover {
+  background-color: #45a049;
 }

@@ -22,6 +22,10 @@ test('system is Mir', () => {
   expect(getCardSystem('22000000')).toBe('mir');
 });
 
+test('system is JCB', () => {
+  expect(getCardSystem('35000000')).toBe('jcb');
+});
+
 test('unknown system', () => {
   expect(getCardSystem('12345678')).toBe(null);
 });

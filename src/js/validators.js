@@ -1,16 +1,21 @@
 export function checkLuhn(cardNumber) {
   let sum = 0;
-  const parity = cardNumber.length % 2;
-  for (let i = 0; i < cardNumber.length; i++) {
+  let shouldDouble = false;
+  
+  for (let i = cardNumber.length - 1; i >= 0; i--) {
     let digit = parseInt(cardNumber[i], 10);
-    if (i % 2 === parity) {
+
+    if (shouldDouble) {
       digit *= 2;
       if (digit > 9) {
         digit -= 9;
       }
     }
+
     sum += digit;
+    shouldDouble = !shouldDouble;
   }
+
   return sum % 10 === 0;
 }
 
@@ -26,6 +31,12 @@ export function getCardSystem(cardNumber) {
   }
   if (/^6(?:011|5)/.test(cardNumber)) {
     return 'discover';
+  }
+  if (/^3(?:0[0-5]|[68][0-9])/.test(cardNumber)) {
+    return 'diners';
+  }
+  if (/^35/.test(cardNumber)) {
+    return 'jcb';
   }
   if (/^22/.test(cardNumber)) {
     return 'mir';

@@ -11,11 +11,13 @@ export default class CardWidget {
     this.parentEl.innerHTML = `
       <div class="card-validator">
         <ul class="cards">
-          <li class="card visa">Visa</li>
-          <li class="card master">Master</li>
-          <li class="card amex">Amex</li>
-          <li class="card discover">Discover</li>
-          <li class="card mir">Mir</li>
+          <li class="card visa"></li>
+          <li class="card master"></li>
+          <li class="card amex"></li>
+          <li class="card discover"></li>
+          <li class="card jcb"></li>
+          <li class="card diners"></li>
+          <li class="card mir"></li>
         </ul>
         <form class="card-form-widget">
           <input type="text" class="input" placeholder="Credit Card Number">
@@ -37,15 +39,12 @@ export default class CardWidget {
     const system = getCardSystem(value);
     
     this.cards.forEach(card => {
-      card.style.opacity = '1'; 
       card.classList.remove('active');
     });
 
     if (system) {
       const activeCard = this.element.querySelector(`.${system}`);
       if (activeCard) {
-        this.cards.forEach(card => card.style.opacity = '0.3');
-        activeCard.style.opacity = '1';
         activeCard.classList.add('active');
       }
     }
