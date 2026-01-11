@@ -20,11 +20,14 @@ export function checkLuhn(cardNumber) {
 }
 
 export function getCardSystem(cardNumber) {
+  if (/^220[0-4]/.test(cardNumber)) {
+    return 'mir';
+  }
+  if (/^(5[1-5]|2[2-7])/.test(cardNumber)) {
+    return 'master';
+  }
   if (/^4/.test(cardNumber)) {
     return 'visa';
-  }
-  if (/^5[1-5]/.test(cardNumber)) {
-    return 'master';
   }
   if (/^3[47]/.test(cardNumber)) {
     return 'amex';
@@ -37,9 +40,6 @@ export function getCardSystem(cardNumber) {
   }
   if (/^35/.test(cardNumber)) {
     return 'jcb';
-  }
-  if (/^22/.test(cardNumber)) {
-    return 'mir';
   }
   return null;
 }

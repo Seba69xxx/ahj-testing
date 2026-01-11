@@ -15,26 +15,23 @@ body {
   width: 500px;
 }
 
-.cards {
-  list-style: none;
-  padding: 0;
+.cards-container {
   display: flex;
   gap: 10px;
   justify-content: flex-start;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
   width: 50px;
   height: 32px;
-  border-radius: 4px;
-  background-color: #fff;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: contain;
   filter: grayscale(100%) opacity(0.4);
   transition: all 0.3s;
   border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 2px;
 }
 
 .card.active {
@@ -42,14 +39,6 @@ body {
   border-color: #888;
   transform: scale(1.1);
 }
-
-.card.visa { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg'); }
-.card.master { background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg'); }
-.card.amex { background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg'); }
-.card.discover { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/57/Discover_Card_logo.svg'); }
-.card.jcb { background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/40/JCB_logo.svg'); }
-.card.diners { background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a6/Diners_Club_Logo3.svg'); }
-.card.mir { background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/b9/Mir-logo.SVG.svg'); }
 
 .card-form-widget {
   display: flex;
