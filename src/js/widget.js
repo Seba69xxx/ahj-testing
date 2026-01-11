@@ -86,4 +86,4 @@ export default class CardWidget {
       this.input.classList.remove('valid');
     }
   }
-}ы
+}
